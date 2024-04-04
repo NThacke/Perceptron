@@ -25,15 +25,15 @@ public class Faces {
         String filename = "";
         switch(type) {
             case Manager.TESTING : {
-                filename = "../data/facedata/facedatatest";
+                filename = "data/facedata/facedatatest";
                 break;
             }
             case Manager.VALIDATE : {
-                filename = "../data/facedata/facedatavalidation";
+                filename = "data/facedata/facedatavalidation";
                 break;
             }
             case Manager.TRAINING : {
-                filename = "../data/facedata/facedatatrain";
+                filename = "data/facedata/facedatatrain";
                 break;
             }
             default : {
