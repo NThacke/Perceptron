@@ -118,7 +118,7 @@ public class Percep {
         long start = System.currentTimeMillis();
         boolean change = true;
         int i = 0;
-        while(i < 100000 && change) {
+        while(i < 10000 && change) {
             if(i % 1000 == 0) {
                 System.out.println(i);
                 for(int j = 0; j < weights.length; j++) {
@@ -145,7 +145,7 @@ public class Percep {
 
     private void output() {
         try {
-            FileWriter writer = new FileWriter("src/data/output/output" + threshold + "txt");
+            FileWriter writer = new FileWriter("src/data/output/output_n:" + n + "_a:" + a + "_b:" + b + " _d:" + threshold + ".txt");
             writer.write("Output File for Perceptron Model training at " + threshold*100 + "% training data\n");
             // Calculate minutes and seconds
             long seconds = training_time / 1000;
@@ -168,7 +168,7 @@ public class Percep {
      */
     private void save() {
         try {
-            FileWriter file = new FileWriter("src/data/weights/weights" + threshold + ".txt");
+            FileWriter file = new FileWriter("src/data/weights/weights_n:" + n + "_a:" + a + "_b:" + b + " _d:" + threshold + ".txt");
             for(int i = 0; i< weights.length; i++) {
                 file.write(String.valueOf(weights[i]) + "\n");
             }
@@ -181,7 +181,7 @@ public class Percep {
 
     private void load() {
         try {
-            File file = new File("src/data/weights/weights" + threshold + ".txt");
+            File file = new File("src/data/weights/weights_n:" + n + "_a:" + a + "_b:" + b + " _d:" + threshold + ".txt");
             Scanner s = new Scanner(file);
             int i = 0;
             while(s.hasNext()) {
@@ -257,6 +257,20 @@ public class Percep {
     public void test() {
         faces = new Faces(Manager.TESTING);
         labels(Manager.TESTING);
+        int correct = 0;
+        for(Face face : faces.getFaces()) {
+            int[] phi = face.phi(n, a, b);
+            double f = f(phi);
+            if(f >= 0 && labels[face.getID()] || f < 0 && !labels[face.getID()]) {
+                correct++;
+            }
+        }
+        System.out.println("Model was correct " + correct + " number of times out of " + labels.length + " for an accuracy of " + (double)(correct)/(double)(labels.length)*100 + " %");
+    }
+
+    public void sanity() {
+        faces = new Faces(Manager.TRAINING);
+        labels(Manager.TRAINING);
         int correct = 0;
         for(Face face : faces.getFaces()) {
             int[] phi = face.phi(n, a, b);
