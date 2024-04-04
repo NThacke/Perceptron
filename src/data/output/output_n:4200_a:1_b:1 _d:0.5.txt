@@ -1,2 +1,2 @@
 Output File for Perceptron Model training at 50.0% training data
-Training took 02:02
+Training took 00:00

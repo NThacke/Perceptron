@@ -73,15 +73,15 @@ public class Percep {
         String filename = "";
         switch(type) {
             case Manager.TRAINING : {
-                filename = "data/facedata/facedatatrainlabels";
+                filename = Manager.FACE_TRAINING_LABELS;
                 break;
             }
             case Manager.VALIDATE : {
-                filename = "data/facedata/facedatavalidationlabels";
+                filename = Manager.FACE_VALIDATION_LABELS;
                 break;
             }
             case Manager.TESTING : {
-                filename = "data/facedata/facedatatestlabels";
+                filename = Manager.FACE_TEST_LABELS;
                 break;
             }
         }
@@ -121,9 +121,10 @@ public class Percep {
         long start = System.currentTimeMillis();
         boolean change = true;
         int i = 0;
-        while(i < 10000 && change) {
-            if(i % 1000 == 0) {
+        while(i < 100000 && change) {
+            if(i % 10000 == 0) {
                 System.out.println(i);
+                System.out.println(this.toString());
                 for(int j = 0; j < weights.length; j++) {
                     System.out.print(weights[j] + "\t");
                 }
@@ -253,7 +254,7 @@ public class Percep {
                 correct++;
             }
         }
-        System.out.println("Model " + this.toString() + " was correct " + correct + " number of times out of " + labels.length + " for an accuracy of " + (double)(correct)/(double)(labels.length)*100 + " %");
+        System.out.println("Validate : Model " + this.toString() + " was correct " + correct + " number of times out of " + labels.length + " for an accuracy of " + (double)(correct)/(double)(labels.length)*100 + " %");
 
     }
 
@@ -268,7 +269,7 @@ public class Percep {
                 correct++;
             }
         }
-        System.out.println("Model " + this.toString() + " was correct " + correct + " number of times out of " + labels.length + " for an accuracy of " + (double)(correct)/(double)(labels.length)*100 + " %");
+        System.out.println("Test : Model " + this.toString() + " was correct " + correct + " number of times out of " + labels.length + " for an accuracy of " + (double)(correct)/(double)(labels.length)*100 + " %");
     }
 
     public void sanity() {
@@ -282,7 +283,7 @@ public class Percep {
                 correct++;
             }
         }
-        System.out.println("Model " + this.toString() + " was correct " + correct + " number of times out of " + labels.length + " for an accuracy of " + (double)(correct)/(double)(labels.length)*100 + " %");
+        System.out.println("Sanity : Model " + this.toString() + " was correct " + correct + " number of times out of " + labels.length + " for an accuracy of " + (double)(correct)/(double)(labels.length)*100 + " %");
     }
 
     public String toString() {
