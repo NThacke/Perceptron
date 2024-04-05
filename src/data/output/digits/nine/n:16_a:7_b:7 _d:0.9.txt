@@ -1,0 +1,6 @@
+Output File for Perceptron Model training at 90.0% training data
+
+Training took 01:04
+Validate : Model {Digit Nine, N : 16, A : 7, B : 7, Threshold : 0.9} was correct 911 number of times out of 1000 for an accuracy of 91.10000000000001 %
+Validate : Model {Digit Nine, N : 16, A : 7, B : 7, Threshold : 0.9} was correct 911 number of times out of 1000 for an accuracy of 91.10000000000001 %
+Test : Model {Digit Nine, N : 16, A : 7, B : 7, Threshold : 0.9} was correct 906 number of times out of 1000 for an accuracy of 90.60000000000001 %

@@ -1,0 +1,5 @@
+Validate : Model {Digit Zero, N : 196, A : 2, B : 2, Threshold : 0.1} was correct 971 number of times out of 1000 for an accuracy of 97.1 %
+Validate : Model {Digit Zero, N : 196, A : 2, B : 2, Threshold : 0.1} was correct 971 number of times out of 1000 for an accuracy of 97.1 %
+Test : Model {Digit Zero, N : 196, A : 2, B : 2, Threshold : 0.1} was correct 973 number of times out of 1000 for an accuracy of 97.3 %
+Validate : Model {Digit Zero, N : 196, A : 2, B : 2, Threshold : 0.1} was correct 971 number of times out of 1000 for an accuracy of 97.1 %
+Test : Model {Digit Zero, N : 196, A : 2, B : 2, Threshold : 0.1} was correct 973 number of times out of 1000 for an accuracy of 97.3 %

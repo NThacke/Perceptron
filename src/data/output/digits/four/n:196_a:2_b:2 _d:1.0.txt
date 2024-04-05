@@ -1,0 +1,9 @@
+Output File for Perceptron Model training at 100.0% training data
+
+Training took 02:16
+Validate : Model {Digit Four, N : 196, A : 2, B : 2, Threshold : 1.0} was correct 961 number of times out of 1000 for an accuracy of 96.1 %
+Test : Model {Digit Four, N : 196, A : 2, B : 2, Threshold : 1.0} was correct 967 number of times out of 1000 for an accuracy of 96.7 %
+Validate : Model {Digit Four, N : 196, A : 2, B : 2, Threshold : 1.0} was correct 961 number of times out of 1000 for an accuracy of 96.1 %
+Test : Model {Digit Four, N : 196, A : 2, B : 2, Threshold : 1.0} was correct 967 number of times out of 1000 for an accuracy of 96.7 %
+Validate : Model {Digit Four, N : 196, A : 2, B : 2, Threshold : 1.0} was correct 961 number of times out of 1000 for an accuracy of 96.1 %
+Test : Model {Digit Four, N : 196, A : 2, B : 2, Threshold : 1.0} was correct 967 number of times out of 1000 for an accuracy of 96.7 %

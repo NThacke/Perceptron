@@ -1,0 +1,9 @@
+Output File for Perceptron Model training at 10.0% training data
+
+Training took 00:00
+Validate : Model {Faces, N : 4200, A : 1, B : 1, Threshold : 0.1} was correct 244 number of times out of 301 for an accuracy of 81.06312292358804 %
+Validate : Model {Faces, N : 4200, A : 1, B : 1, Threshold : 0.1} was correct 244 number of times out of 301 for an accuracy of 81.06312292358804 %
+Validate : Model {Faces, N : 4200, A : 1, B : 1, Threshold : 0.1} was correct 244 number of times out of 301 for an accuracy of 81.06312292358804 %
+Test : Model {Faces, N : 4200, A : 1, B : 1, Threshold : 0.1} was correct 113 number of times out of 150 for an accuracy of 75.33333333333333 %
+Validate : Model {Faces, N : 4200, A : 1, B : 1, Threshold : 0.1} was correct 244 number of times out of 301 for an accuracy of 81.06312292358804 %
+Test : Model {Faces, N : 4200, A : 1, B : 1, Threshold : 0.1} was correct 113 number of times out of 150 for an accuracy of 75.33333333333333 %
